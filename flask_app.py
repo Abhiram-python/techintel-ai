@@ -53,7 +53,7 @@ results = search.get_dict()
 # print(results)
 
 ############# Using the Google Gemini API to generate content based on the search results
-api_key = os.environ.get("GOOGLE_API_KEY")
+api_key = os.getenv("GOOGLE_API_KEY")
 
 
 client = genai.Client(api_key=api_key)
