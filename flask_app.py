@@ -63,7 +63,7 @@ api_key = os.getenv("GENAI_API_KEY")
 client = genai.Client(api_key=api_key)
 
 response = client.models.generate_content(
-    model="gemini-3.1-pro-preview",
+    model="gemini-3.1-flash-preview",
     contents=f'''from the results of the search{results} go through all the sites and give a list or dictionarys which have id,name,date,location,organization,description and link of the hackathons.
     i want all this in this format:
     [
@@ -85,7 +85,8 @@ response = client.models.generate_content(
             "description": "Description of Hackathon 2",
             "link": "https://example.com/hackathon2"
         }},
-    ] and note don't give any other text except the list of dictionarys. and date should only be on start date of the hackathon''',
+    ] and note don't give any other text except the list of dictionarys. and date should only be on start date of the hackathon
+     and i want all which are listed in the search results like 10''',
 )
 
 # print(response.text)
