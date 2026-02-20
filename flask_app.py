@@ -63,7 +63,7 @@ api_key = os.getenv("GENAI_API_KEY")
 client = genai.Client(api_key=api_key)
 
 response = client.models.generate_content(
-    model="gemini-3.5",
+    model="gemini-3.1-pro-preview",
     contents=f'''from the results of the search{results} go through all the sites and give a list or dictionarys which have id,name,date,location,organization,description and link of the hackathons.
     i want all this in this format:
     [
