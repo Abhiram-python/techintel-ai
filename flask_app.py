@@ -6,6 +6,8 @@ This is a starter template showing how to integrate the frontend with Flask.
 Customize the endpoints and logic based on your database and API requirements.
 """
 
+import os
+
 from flask import Flask, render_template, request, jsonify, session
 # from flask_cors import CORS
 from functools import wraps
@@ -51,8 +53,10 @@ results = search.get_dict()
 # print(results)
 
 ############# Using the Google Gemini API to generate content based on the search results
+api_key = os.environ.get("GOOGLE_API_KEY")
 
-client = genai.Client(api_key="AIzaSyDJJWKX0u45Ej_EyzKhJFjvlNYmhtwM__s")
+
+client = genai.Client(api_key=api_key)
 
 response = client.models.generate_content(
     model="gemini-3-flash-preview",
