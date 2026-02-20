@@ -7,7 +7,7 @@ Customize the endpoints and logic based on your database and API requirements.
 """
 
 from flask import Flask, render_template, request, jsonify, session
-from flask_cors import CORS
+# from flask_cors import CORS
 from functools import wraps
 import json
 from datetime import datetime
