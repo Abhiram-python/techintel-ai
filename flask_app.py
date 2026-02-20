@@ -31,6 +31,17 @@ app.secret_key = 'your-secret-key-change-this'
 #     }
 # })
 
+from flask_cors import CORS
+
+CORS(app, resources={
+    r"/api/*": {
+        "origins": "https://stupendous-yeot-7f0b3c.netlify.app",
+        "methods": ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
+        "allow_headers": ["Content-Type", "Authorization"],
+        "supports_credentials": True
+    }
+})
+
 ########## serp api and google gemini integration for hackathon data extraction and formatting
 
 from google import genai
