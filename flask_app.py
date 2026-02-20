@@ -624,9 +624,9 @@ def server_error(error):
 # Run Application
 # ============================================================================
 
-if __name__ == '__main__':
-    # Development
-    app.run(debug=True, host='0.0.0.0', port=5000)
+# if __name__ == '__main__':
+#     # Development
+#     app.run(debug=True, host='0.0.0.0', port=5000)
 
-    # Production: Use gunicorn
-    # gunicorn -w 4 -b 0.0.0.0:5000 flask_app:app
+#     # Production: Use gunicorn
+#     # gunicorn -w 4 -b 0.0.0.0:5000 flask_app:app
