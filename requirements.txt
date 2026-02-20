@@ -1,9 +1,4 @@
 Flask==3.0.3
-
 google-genai==0.3.0
-
-# Google Generative AI (Gemini) SDK
-# google-generativeai==0.8.3
-
-# Search Engine API Integration
 google-search-results==2.4.2
+flask-cors==1.4.0
