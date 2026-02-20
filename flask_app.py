@@ -98,10 +98,10 @@ def login_required(f):
 # Page Routes
 # ============================================================================
 
-# @app.route('/')
-# def index():
-#     """Home page"""
-#     return render_template('index.html')
+@app.route('/')
+def index():
+    """Home page"""
+    return "chad"
 
 # @app.route('/hackathons')
 # def hackathons():
